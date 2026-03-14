@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor - Lossless Compression</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📦 Image Compressor</h1>
+            <p>Reduce image file size using lossless compression</p>
+        </header>
+
+        <div class="card">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📁</div>
+                <h3>Drop your image here</h3>
+                <p>or click to browse (PNG, JPG, JPEG, WebP)</p>
+                <input type="file" id="fileInput" accept="image/png,image/jpeg,image/jpg,image/webp">
+                <button class="btn" onclick="document.getElementById('fileInput').click()">Choose File</button>
+            </div>
+
+            <div class="compression-options">
+                <h3>Compression Settings</h3>
+                
+                <div class="option-group">
+                    <label>Output Format:</label>
+                    <div class="format-options">
+                        <label>
+                            <input type="radio" name="format" value="jpeg" checked>
+                            JPEG (Best Compression)
+                        </label>
+                        <label>
+                            <input type="radio" name="format" value="webp">
+                            WebP (Modern)
+                        </label>
+                        <label>
+                            <input type="radio" name="format" value="png">
+                            PNG (Quality)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quality-control">
+                    <label for="qualitySlider">
+                        Compression Quality: <span id="qualityValue">85</span>%
+                    </label>
+                    <input type="range" id="qualitySlider" min="10" max="100" value="85" class="slider">
+                    <p class="hint">Lower quality = Smaller file size</p>
+                </div>
+                
+                <div class="resize-option">
+                    <label>
+                        <input type="checkbox" id="resizeCheck">
+                        Resize image (reduces dimensions)
+                    </label>
+                    <div id="resizeControls" style="display: none; margin-top: 10px;">
+                        <label for="maxWidth">Max Width (px):</label>
+                        <input type="number" id="maxWidth" value="1920" min="100" max="4000" step="100">
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-section" id="comparisonSection">
+                <h2>📊 Compression Results</h2>
+                
+                <div class="comparison-grid">
+                    <div class="file-info">
+                        <h3>📄 Original File</h3>
+                        <div class="info-row">
+                            <span class="label">File Name:</span>
+                            <span class="value" id="originalName">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">File Size:</span>
+                            <span class="value" id="originalSize">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Dimensions:</span>
+                            <span class="value" id="originalDimensions">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Format:</span>
+                            <span class="value" id="originalFormat">-</span>
+                        </div>
+                    </div>
+
+                    <div class="file-info">
+                        <h3>✅ Compressed File</h3>
+                        <div class="info-row">
+                            <span class="label">File Name:</span>
+                            <span class="value" id="compressedName">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">File Size:</span>
+                            <span class="value" id="compressedSize">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Dimensions:</span>
+                            <span class="value" id="compressedDimensions">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Format:</span>
+                            <span class="value" id="compressedFormat">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="savings" id="savingsBox">
+                    <h2 id="savingsPercent">0%</h2>
+                    <p id="savingsText">Size Reduction</p>
+                </div>
+
+                <div class="preview-section">
+                    <h3>👀 Preview Comparison</h3>
+                    <div class="preview-grid">
+                        <div class="preview-box">
+                            <h4>Before</h4>
+                            <img id="originalPreview" src="" alt="Original">
+                        </div>
+                        <div class="preview-box">
+                            <h4>After</h4>
+                            <img id="compressedPreview" src="" alt="Compressed">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn download-btn" id="downloadBtn">⬇️ Download Compressed File</button>
+                <button class="btn reset-btn" onclick="resetApp()">🔄 Compress Another File</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built with lossless compression algorithms</p>
+        </footer>
+    </div>
+
+    <script src="compression.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

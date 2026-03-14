@@ -1,0 +1,5 @@
+JPEG DCT compression algorithm through the browser's Canvas API.
+JPEG uses Discrete Cosine Transform to convert spatial image data into frequency domain, 
+then applies quantization to remove imperceptible details, and 
+finally uses Huffman coding for lossless compression of the quantized data. 
+The quality parameter controls the quantization table values.
