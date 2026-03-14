@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Node (if added later)
+node_modules/
