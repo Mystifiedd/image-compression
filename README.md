@@ -1,17 +1,16 @@
-# Image Compressor - Smart File Size Reduction
+# Image Compressor - Smart File Size Reduction (Lossy)
 
 A web-based image compression tool that **actually reduces file size** using quality-based compression.
 
-## Features
-
-✅ **Real Size Reduction** - Compresses files using lossy compression
-✅ **Quality Control** - Adjust compression level (10-100%)
-✅ **Multiple Formats** - JPEG (best compression), WebP (modern), PNG (quality)
-✅ **Before & After** - See exact file size savings
-✅ **Visual Preview** - Compare quality side-by-side
-✅ **Smart Resizing** - Reduce dimensions for extra savings
-✅ **Drag & Drop** - Easy file upload
-✅ **Instant Download** - Save compressed images
+##  Features
+- **Real Size Reduction** - Compresses files using lossy compression
+- **Quality Control** - Adjust compression level (10-100%)
+- **Multiple Formats** - JPEG (best compression), WebP (modern), PNG (quality)
+- **Before & After** - See exact file size savings
+- **Visual Preview** - Compare quality side-by-side
+- **Smart Resizing** - Reduce dimensions for extra savings
+- **Drag & Drop** - Easy file upload
+- **Instant Download** - Save compressed images
 
 ## How It Works
 
@@ -41,9 +40,7 @@ A web-based image compression tool that **actually reduces file size** using qua
    - Maintains aspect ratio
    - Best for: Large images
 
-### Why It Actually Works
-
-Unlike "lossless" compression that can't reduce file size much, this tool uses:
+##   this tool uses:
 - **Lossy compression** - Removes imperceptible data
 - **Quality control** - You choose size vs. quality trade-off
 - **Smart algorithms** - Canvas API with optimized encoding
@@ -104,16 +101,6 @@ compression-website/
 - Processing happens in browser (no server)
 - Very large images may be slow
 - Quality loss is intentional (that's how compression works!)
-
-## For Your School Project
-
-This demonstrates:
-- ✅ Actual file compression with measurable results
-- ✅ Separation of HTML, CSS, and JavaScript
-- ✅ Real-world compression algorithms
-- ✅ Interactive UI with quality control
-- ✅ Before/after comparison
-- ✅ Professional code structure
 
 ## Understanding Compression
 
